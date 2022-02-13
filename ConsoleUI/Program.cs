@@ -10,7 +10,7 @@ namespace ConsoleUI
     * 2/12/2022
     * CSC 153
     * Kalie Kirch
-    * The beggining of my Text adventure program for the school semester project.
+    * The beggining of my Text adventure program for the semester project.
     */
     internal class Program
     {
@@ -62,14 +62,12 @@ namespace ConsoleUI
                             Console.WriteLine(value);
                         }
                         break;
-                        break;
 
                     case "3":
                         foreach (string value in potions)
                         {
                             Console.WriteLine(value);
                         }
-                        break;
                         break;
 
                     case "4":
@@ -78,7 +76,6 @@ namespace ConsoleUI
                             Console.WriteLine(value);
                         }
                         break;
-                        break;
 
                     case "5":
                         foreach (string value in items)
@@ -86,14 +83,12 @@ namespace ConsoleUI
                             Console.WriteLine(value);
                         }
                         break;
-                        break;
 
                     case "6":
                         foreach (string value in monsters)
                         {
                             Console.WriteLine(value);
                         }
-                        break;
                         break;
 
                     case "rooms":
@@ -111,14 +106,12 @@ namespace ConsoleUI
                             Console.WriteLine(value);
                         }
                         break;
-                        break;
 
                     case "potions":
                         foreach (string value in potions)
                         {
                             Console.WriteLine(value);
                         }
-                        break;
                         break;
 
                     case "treasures":
@@ -127,7 +120,6 @@ namespace ConsoleUI
                             Console.WriteLine(value);
                         }
                         break;
-                        break;
 
                     case "items":
                         foreach (string value in items)
@@ -135,14 +127,12 @@ namespace ConsoleUI
                             Console.WriteLine(value);
                         }
                         break;
-                        break;
 
                     case "bestiary":
                         foreach (string value in monsters)
                         {
                             Console.WriteLine(value);
                         }
-                        break;
                         break;
 
                     case "7":
