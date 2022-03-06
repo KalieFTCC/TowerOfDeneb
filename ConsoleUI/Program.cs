@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace ConsoleUI
 {
@@ -19,16 +20,22 @@ namespace ConsoleUI
             bool exit = false;
             int roomIndex = 0;
             //These are the arrays for the data
-            string[] rooms = new string[5]{"Tomb of the Antecedent", "Library", "Crypt", "Hall of the Antecedent", "Stairway"};
-            string[] weapons = new string[4]{"Mace", "Sword", "Boomerang" ,"Gunsaber" };
-            string[] potions = new string[2]{"Elixir of Rage", "Elixir of Recovery"};
-            string[] treasures = new string[3]{"Amulet of Canopus", "Scorpio's Frying Pan", "Emerald Orb"};
+            string filePath = @"D:\Kalie's Data\Desktop\C# projects\TowerOfDeneb\ConsoleUI\rooms.txt";
+            List <string> rooms = File.ReadAllLines(filePath).ToList();
+            string filePath2 = @"D:\Kalie's Data\Desktop\C# projects\TowerOfDeneb\ConsoleUI\weapons.txt";
+            List <string> weapons = File.ReadAllLines(filePath2).ToList();
+            string filePath3 = @"D:\Kalie's Data\Desktop\C# projects\TowerOfDeneb\ConsoleUI\potions.txt";
+            List <string> potions = File.ReadAllLines(filePath3).ToList();
+            string filePath4 = @"D:\Kalie's Data\Desktop\C# projects\TowerOfDeneb\ConsoleUI\treasures.txt";
+            List<string> treasures = File.ReadAllLines(filePath4).ToList();
             //New Alphabetical weapons
             var sortedWeapons = weapons.OrderBy(x => x.ToLower()).ToArray();
 
             //Lists for catalogs
-            List<string> items = new List<string>(){"Corn", "Kami's Kaleidoscope", "Bomb", "Canopus's Curse Block" };
-            List<string> monsters = new List<string>(){ "Skeleman", "Robbin' Goblin", "Gravekeeper's Curse", "Anteatereatingant", "Doom Donuts" };
+            string catalogPath = @"D:\Kalie's Data\Desktop\C# projects\TowerOfDeneb\ConsoleUI\items.txt";
+            List<string> items = File.ReadAllLines(catalogPath).ToList();
+            string catalogPath2 = @"D:\Kalie's Data\Desktop\C# projects\TowerOfDeneb\ConsoleUI\monsters.txt";
+            List<string> monsters = File.ReadAllLines(catalogPath2).ToList();
             //Main Menu
 
             while (exit == false)
@@ -58,7 +65,6 @@ namespace ConsoleUI
                     case "2":
                         foreach (string value in sortedWeapons)
                         {
-                            Array.Sort(weapons);
                             Console.WriteLine(value);
                         }
                         break;
@@ -101,8 +107,7 @@ namespace ConsoleUI
                         //use new array to display weapons alphabetically
                     case "weapons":
                         foreach (string value in sortedWeapons)
-                        {
-                            Array.Sort(weapons);
+                        { 
                             Console.WriteLine(value);
                         }
                         break;
