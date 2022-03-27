@@ -48,6 +48,7 @@ namespace ConsoleUI
                 Console.WriteLine("5. Display Items");
                 Console.WriteLine("6. Display Bestiary(Monsters)");
                 Console.WriteLine("7. Exit");
+                Console.WriteLine("8. Attack");
                 Console.Write("Enter your choice ");
                 string input = Console.ReadLine();
 
@@ -142,6 +143,9 @@ namespace ConsoleUI
 
                     case "7":
                         exit = true;
+                        break;
+                    case "8":
+                        AttackClass.FightMonster();
                         break;
 
                     case "n":

@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DenebLibrary\DenebLibrary.csproj">
+      <Project>{c5c64939-3f6e-4b36-878b-28200ac4c460}</Project>
+      <Name>DenebLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
